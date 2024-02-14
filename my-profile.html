@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/all.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/flaticon.css" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/fancybox.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/meanmenu.css" />
@@ -146,7 +146,7 @@
      <div class="profile-detail">
         <div class="container">
             <div class="row gy-4">
-                <div class="col-lg-3 col-md-4">
+                <div class="col-lg-3 col-md-12">
                     <div class="profile-left">
                         <div class="profile-card web-view">
                           
@@ -175,7 +175,7 @@
                     </div>
                    
                 </div>
-                <div class="col-lg-9 col-md-8">
+                <div class="col-lg-9 col-md-12">
                     
                     <div class="tab-content web-view" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
@@ -198,7 +198,7 @@
                                    </div>
                                 </div>
                                 <form class="row gy-4 mb-5">
-                                   <div class="col-md-6">
+                                   <div class="col-md-12">
                                      <label  class="form-label">Full Name</label>
                                      <input type="text" class="form-control bg-transt" placeholder="Victoria Nowak">
                                    </div>
@@ -214,6 +214,10 @@
                                        <label class="form-label">Password</label>
                                        <input type="password" class="form-control" placeholder="*****************">
                                    </div>
+                                   <div class="col-md-6">
+                                    <label class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" placeholder="*****************">
+                                </div>
                                    <div class="col-md-12">
                                     <label class="form-label">Address</label>
                                     <input type="text" class="form-control" placeholder="Apartment, studio, or floor">
@@ -254,34 +258,39 @@
                                            
                                          </form>
                                          <h5 class="book-title">Add your book images<i class="bi bi-question-circle ms-2"></i></h5>
-                                         <div class="row gy-4 gx-2">
-                                            <div class="col-lg-2 col-6 col-md-3">
-                                                <img src="./assets/images/book-1.png" width="100%" alt="">
+                                         
+                                         
+                                         <div class="preview-images-zone row gy-4">
+                                            <div class="preview-image preview-show-1">
+                                                <div class="image-cancel" data-no="1">x</div>
+                                                <div class="image-zone"><img id="pro-img-1" src="./assets/images/book-1.png"></div>
+                                              
+                                                <p class="text">My first 1000 word</p>
+                                                
                                             </div>
-                                            <div class="col-lg-2 col-6 col-md-3">
-                                                <img src="./assets/images/book-2.png" width="100%" alt="">
+                                            <div class="preview-image preview-show-2">
+                                                <div class="image-cancel" data-no="2">x</div>
+                                                <div class="image-zone"><img id="pro-img-2" src="./assets/images/book-2.png"></div>
+                                                <p class="text">Sudha Murty English text Guide - A</p>
                                             </div>
-                                            <div class="col-lg-2 col-6 col-md-3">
-                                                <img src="./assets/images/book-3.png" width="100%" alt="">
+                                            <div class="preview-image preview-show-3">
+                                                <div class="image-cancel" data-no="3">x</div>
+                                                <div class="image-zone"><img id="pro-img-3" src="./assets/images/book-3.png"></div>
+                                                <p class="text">Biology XI - XII</p>
                                             </div>
-                                            <div class="col-lg-2 col-6 col-md-3">
-                                                <img src="./assets/images/book-2.png" width="100%" alt="">
-                                            </div>
-                                            <div class="col-lg-2 col-6 col-md-3">
-                                                <img src="./assets/images/book-3.png" width="100%" alt="">
-                                            </div>
-                                            <div class="col-lg-2 col-6 col-md-3">
-                                                <div class="file-upload">
-                                                    <label for="upload" class="file-upload__label">
+                                            <div class="preview-image">
+                                                <fieldset class="file-upload">
+                                                    <a href="javascript:void(0)" class="file-upload__label" onclick="$('#pro-image').click()">
                                                         <div class="position-box">
                                                             <div class="icon"><i class="bi bi-plus-circle"></i></div><div class="text">Add more</div>
-                                                        </div>
-                                                    </label>
-                                                    <input id="upload" class="file-upload__input" type="file" name="file-upload">
-                                                </div>
+                                                        </div></a>
+                                                    <input type="file" id="pro-image" name="pro-image" style="display: none;" class="form-control" multiple>
+                                                </fieldset>
                                             </div>
-                                         </div>
-                                         <p class="mt-4"><a href="#" class="btn submit-btn">Submit</a></p>
+                                        </div>
+                                        
+                                        
+                                         <p class="mt-5 text-end"><a href="#" class="btn submit-btn">Submit</a></p>
                                     </div>
                                 </div>
                               </div>
@@ -299,12 +308,7 @@
                                            
                                            <div class="col-md-6">
                                                <label class="form-label">Bank Name</label>
-                                               <select class="form-select" aria-label="Default select example">
-                                                <option selected>Bank</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                              </select>
+                                               <input type="text" class="form-control" placeholder="HDFC Bank">
                                               
                                            </div>
                                            <div class="col-md-6">
@@ -356,7 +360,7 @@
                                 <div class="col-lg-6">
                                     <h5 class="profile-title">Order History</h5>
                                 </div>
-                                <div class="col-lg-6">
+                                <!-- <div class="col-lg-6">
                                     <div class="filter-box">
                                         <div class="row gy-4">
                                             <div class="col-md-6">
@@ -373,7 +377,7 @@
                                               </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="history-detail">
                                 <div class="book-history">
@@ -381,100 +385,88 @@
                                         <div class="col-lg-2 col-md-3">
                                             <img src="./assets/images/book-1.png" width="100%" alt="">
                                         </div>
-                                        <div class="col-lg-7 col-md-12">
+                                        <div class="col-lg-10 col-md-12">
                                            <div class="row gy-4">
                                             <div class="col-lg-12">
-                                                <h6 class="history-subtitle">Book name</h6>
-                                                <p class="history-desc">Objective ncert at your fingertips</p>
+                                                <h6 class="history-subtitle">ISBN</h6>
+                                                <p class="history-desc">7766543567689</p>
                                             </div>
                                             <div class="col-lg-12">
                                                <div class="row gy-4">
                                                 <div class="col-lg-4 col-md-6">
-                                                    <h6 class="history-subtitle">author name</h6>
-                                                    <p class="history-desc">Lisa jewall</p>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6">
-                                                    <h6 class="history-subtitle">Offered price</h6>
+                                                    <h6 class="history-subtitle">Approved price</h6>
                                                     <p class="history-desc">299</p>
                                                 </div>
                                                 <div class="col-lg-4 col-md-12">
-                                                    <h6 class="history-subtitle">Categorey</h6>
-                                                    <p class="history-desc">Education</p>
+                                                    <h6 class="history-subtitle">Approved Date</h6>
+                                                    <p class="history-desc">10 Feb 2024</p>
+                                                </div>
+                                                <div class="col-lg-4 col-md-12">
+                                                    <h6 class="history-subtitle">Payment Date</h6>
+                                                    <p class="history-desc">12 Feb 2024</p>
                                                 </div>
                                                </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="row gy-4">
                                                  <div class="col-lg-4 col-md-6">
-                                                     <h6 class="history-subtitle">ISBN</h6>
+                                                     <h6 class="history-subtitle">Payment Details</h6>
                                                      <p class="history-desc">7766543567689</p>
                                                  </div>
-                                                 <div class="col-lg-4 col-md-6">
-                                                     <h6 class="history-subtitle">Condition</h6>
-                                                     <p class="history-desc">Good</p>
-                                                 </div>
-                                                 <div class="col-lg-4 col-md-12">
+                                                
+                                                 <div class="col-lg-8 col-md-12">
                                                      <h6 class="history-subtitle">STATUS</h6>
-                                                     <p class="history-desc"><span class="success-text">Approved</span>|<span class="danger-text">Payment Pending</span></p>
+                                                     <p class="history-desc"><a href="#" class="btn success-text">Approved</a></p>
                                                  </div>
                                                 </div>
                                              </div>
                                            </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <p class="text-center"><a href="#" class="btn common-btn">Write Review</a></p>
-                                        </div>
+                                       
                                     </div>
                                 </div>
-                                <div class="book-history">
-                                    <div class="row gy-4 align-items-lg-center">
-                                        <div class="col-lg-2 col-md-3">
-                                            <img src="./assets/images/book-2.png" width="100%" alt="">
+                                <div class="row gy-4 align-items-lg-center">
+                                    <div class="col-lg-2 col-md-3">
+                                        <img src="./assets/images/book-2.png" width="100%" alt="">
+                                    </div>
+                                    <div class="col-lg-10 col-md-12">
+                                       <div class="row gy-4">
+                                        <div class="col-lg-12">
+                                            <h6 class="history-subtitle">ISBN</h6>
+                                            <p class="history-desc">7766543567689</p>
                                         </div>
-                                        <div class="col-lg-7 col-md-12">
+                                        <div class="col-lg-12">
                                            <div class="row gy-4">
-                                            <div class="col-lg-12 col-md-12">
-                                                <h6 class="history-subtitle">Book name</h6>
-                                                <p class="history-desc">Objective ncert at your fingertips</p>
+                                            <div class="col-lg-4 col-md-6">
+                                                <h6 class="history-subtitle">Approved price</h6>
+                                                <p class="history-desc">299</p>
                                             </div>
-                                            <div class="col-lg-12 col-md-12">
-                                               <div class="row gy-4">
-                                                <div class="col-lg-4 col-md-6">
-                                                    <h6 class="history-subtitle">author name</h6>
-                                                    <p class="history-desc">Lisa jewall</p>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6">
-                                                    <h6 class="history-subtitle">Offered price</h6>
-                                                    <p class="history-desc">299</p>
-                                                </div>
-                                                <div class="col-lg-4 col-md-12">
-                                                    <h6 class="history-subtitle">Categorey</h6>
-                                                    <p class="history-desc">Education</p>
-                                                </div>
-                                               </div>
+                                            <div class="col-lg-4 col-md-12">
+                                                <h6 class="history-subtitle">Approved Date</h6>
+                                                <p class="history-desc">13 Feb 2024</p>
                                             </div>
-                                            <div class="col-lg-12">
-                                                <div class="row gy-4">
-                                                 <div class="col-lg-4 col-md-6">
-                                                     <h6 class="history-subtitle">ISBN</h6>
-                                                     <p class="history-desc">7766543567689</p>
-                                                 </div>
-                                                 <div class="col-lg-4 col-md-6">
-                                                     <h6 class="history-subtitle">Condition</h6>
-                                                     <p class="history-desc">Good</p>
-                                                 </div>
-                                                 <div class="col-lg-4 col-md-12">
-                                                     <h6 class="history-subtitle">STATUS</h6>
-                                                     <p class="history-desc"><span class="success-text">Approved</span>|<span class="danger-text">Payment Pending</span></p>
-                                                 </div>
-                                                </div>
-                                             </div>
+                                            <div class="col-lg-4 col-md-12">
+                                                <h6 class="history-subtitle">Payment Date</h6>
+                                                <p class="history-desc">14 Feb 2024</p>
+                                            </div>
                                            </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <p class="text-center"><a href="#" class="btn common-btn">Write Review</a></p>
-                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="row gy-4">
+                                             <div class="col-lg-4 col-md-6">
+                                                 <h6 class="history-subtitle">Payment Details</h6>
+                                                 <p class="history-desc">7766543567689</p>
+                                             </div>
+                                            
+                                             <div class="col-lg-8 col-md-12">
+                                                 <h6 class="history-subtitle">STATUS</h6>
+                                                 <p class="history-desc"><a href="#" class="btn danger-text">Declined</a></p>
+                                             </div>
+                                            </div>
+                                         </div>
+                                       </div>
                                     </div>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -517,6 +509,10 @@
                                            <label class="form-label">Password</label>
                                            <input type="password" class="form-control" placeholder="*****************">
                                        </div>
+                                       <div class="col-md-6">
+                                        <label class="form-label">Confirm Password</label>
+                                        <input type="password" class="form-control" placeholder="*****************">
+                                    </div>
                                        <div class="col-md-12">
                                         <label class="form-label">Address</label>
                                         <input type="text" class="form-control" placeholder="Apartment, studio, or floor">
@@ -557,33 +553,35 @@
                                                
                                              </form>
                                              <h5 class="book-title">Add your book images<i class="bi bi-question-circle ms-2"></i></h5>
-                                             <div class="row gy-4 gx-2">
-                                                <div class="col-lg-2 col-6 col-md-3">
-                                                    <img src="./assets/images/book-1.png" width="100%" alt="">
+                                             <div class="preview-images-zone row gy-4">
+                                                <div class="preview-image preview-show-1">
+                                                    <div class="image-cancel" data-no="1">x</div>
+                                                    <div class="image-zone"><img id="pro-img-1" src="./assets/images/book-1.png"></div>
+                                                  
+                                                    <p class="text">My first 1000 word</p>
+                                                    
                                                 </div>
-                                                <div class="col-lg-2 col-6 col-md-3">
-                                                    <img src="./assets/images/book-2.png" width="100%" alt="">
+                                                <div class="preview-image preview-show-2">
+                                                    <div class="image-cancel" data-no="2">x</div>
+                                                    <div class="image-zone"><img id="pro-img-2" src="./assets/images/book-2.png"></div>
+                                                    <p class="text">Sudha Murty English text Guide - A</p>
                                                 </div>
-                                                <div class="col-lg-2 col-6 col-md-3">
-                                                    <img src="./assets/images/book-3.png" width="100%" alt="">
+                                                <div class="preview-image preview-show-3">
+                                                    <div class="image-cancel" data-no="3">x</div>
+                                                    <div class="image-zone"><img id="pro-img-3" src="./assets/images/book-3.png"></div>
+                                                    <p class="text">Biology XI - XII</p>
                                                 </div>
-                                                <div class="col-lg-2 col-6 col-md-3">
-                                                    <img src="./assets/images/book-2.png" width="100%" alt="">
-                                                </div>
-                                                <div class="col-lg-2 col-6 col-md-3">
-                                                    <img src="./assets/images/book-3.png" width="100%" alt="">
-                                                </div>
-                                                <div class="col-lg-2 col-6 col-md-3">
-                                                    <div class="file-upload">
-                                                        <label for="upload" class="file-upload__label">
+                                                <div class="preview-image">
+                                                    <fieldset class="file-upload">
+                                                        <a href="javascript:void(0)" class="file-upload__label" onclick="$('#pro-image').click()">
                                                             <div class="position-box">
                                                                 <div class="icon"><i class="bi bi-plus-circle"></i></div><div class="text">Add more</div>
-                                                            </div>
-                                                        </label>
-                                                        <input id="upload" class="file-upload__input" type="file" name="file-upload">
-                                                    </div>
+                                                            </div></a>
+                                                        <input type="file" id="pro-image" name="pro-image" style="display: none;" class="form-control" multiple>
+                                                    </fieldset>
                                                 </div>
-                                             </div>
+                                            </div>
+                                             
                                              <p class="mt-4"><a href="#" class="btn submit-btn">Submit</a></p>
                                         </div>
                                     </div>
@@ -602,12 +600,7 @@
                                                
                                                <div class="col-md-6">
                                                    <label class="form-label">Bank Name</label>
-                                                   <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Bank</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                  </select>
+                                                   <input type="text" class="form-control" placeholder="HDFC Bank">
                                                   
                                                </div>
                                                <div class="col-md-6">
@@ -659,7 +652,7 @@
                                     <div class="col-lg-6">
                                         <h5 class="profile-title">Order History</h5>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <!-- <div class="col-lg-6">
                                         <div class="filter-box">
                                             <div class="row gy-4">
                                                 <div class="col-md-6">
@@ -676,7 +669,7 @@
                                                   </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="history-detail">
                                     <div class="book-history">
@@ -684,100 +677,88 @@
                                             <div class="col-lg-2 col-md-3">
                                                 <img src="./assets/images/book-1.png" width="100%" alt="">
                                             </div>
-                                            <div class="col-lg-7 col-md-12">
+                                            <div class="col-lg-10 col-md-12">
                                                <div class="row gy-4">
                                                 <div class="col-lg-12">
-                                                    <h6 class="history-subtitle">Book name</h6>
-                                                    <p class="history-desc">Objective ncert at your fingertips</p>
+                                                    <h6 class="history-subtitle">ISBN</h6>
+                                                    <p class="history-desc">7766543567689</p>
                                                 </div>
                                                 <div class="col-lg-12">
                                                    <div class="row gy-4">
                                                     <div class="col-lg-4 col-md-6">
-                                                        <h6 class="history-subtitle">author name</h6>
-                                                        <p class="history-desc">Lisa jewall</p>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <h6 class="history-subtitle">Offered price</h6>
+                                                        <h6 class="history-subtitle">Approved price</h6>
                                                         <p class="history-desc">299</p>
                                                     </div>
                                                     <div class="col-lg-4 col-md-12">
-                                                        <h6 class="history-subtitle">Categorey</h6>
-                                                        <p class="history-desc">Education</p>
+                                                        <h6 class="history-subtitle">Approved Date</h6>
+                                                        <p class="history-desc">10 Feb 2024</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-12">
+                                                        <h6 class="history-subtitle">Payment Date</h6>
+                                                        <p class="history-desc">12 Feb 2024</p>
                                                     </div>
                                                    </div>
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="row gy-4">
                                                      <div class="col-lg-4 col-md-6">
-                                                         <h6 class="history-subtitle">ISBN</h6>
+                                                         <h6 class="history-subtitle">Payment Details</h6>
                                                          <p class="history-desc">7766543567689</p>
                                                      </div>
-                                                     <div class="col-lg-4 col-md-6">
-                                                         <h6 class="history-subtitle">Condition</h6>
-                                                         <p class="history-desc">Good</p>
-                                                     </div>
-                                                     <div class="col-lg-4 col-md-12">
+                                                    
+                                                     <div class="col-lg-8 col-md-12">
                                                          <h6 class="history-subtitle">STATUS</h6>
-                                                         <p class="history-desc"><span class="success-text">Approved</span>|<span class="danger-text">Payment Pending</span></p>
+                                                         <p class="history-desc"><a href="#" class="btn success-text">Approved</a></p>
                                                      </div>
                                                     </div>
                                                  </div>
                                                </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-6">
-                                                <p class="text-center"><a href="#" class="btn common-btn">Write Review</a></p>
-                                            </div>
+                                           
                                         </div>
                                     </div>
-                                    <div class="book-history">
-                                        <div class="row gy-4 align-items-lg-center">
-                                            <div class="col-lg-2 col-md-3">
-                                                <img src="./assets/images/book-2.png" width="100%" alt="">
+                                    <div class="row gy-4 align-items-lg-center">
+                                        <div class="col-lg-2 col-md-3">
+                                            <img src="./assets/images/book-2.png" width="100%" alt="">
+                                        </div>
+                                        <div class="col-lg-10 col-md-12">
+                                           <div class="row gy-4">
+                                            <div class="col-lg-12">
+                                                <h6 class="history-subtitle">ISBN</h6>
+                                                <p class="history-desc">7766543567689</p>
                                             </div>
-                                            <div class="col-lg-7 col-md-12">
+                                            <div class="col-lg-12">
                                                <div class="row gy-4">
-                                                <div class="col-lg-12 col-md-12">
-                                                    <h6 class="history-subtitle">Book name</h6>
-                                                    <p class="history-desc">Objective ncert at your fingertips</p>
+                                                <div class="col-lg-4 col-md-6">
+                                                    <h6 class="history-subtitle">Approved price</h6>
+                                                    <p class="history-desc">299</p>
                                                 </div>
-                                                <div class="col-lg-12 col-md-12">
-                                                   <div class="row gy-4">
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <h6 class="history-subtitle">author name</h6>
-                                                        <p class="history-desc">Lisa jewall</p>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <h6 class="history-subtitle">Offered price</h6>
-                                                        <p class="history-desc">299</p>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-12">
-                                                        <h6 class="history-subtitle">Categorey</h6>
-                                                        <p class="history-desc">Education</p>
-                                                    </div>
-                                                   </div>
+                                                <div class="col-lg-4 col-md-12">
+                                                    <h6 class="history-subtitle">Approved Date</h6>
+                                                    <p class="history-desc">13 Feb 2024</p>
                                                 </div>
-                                                <div class="col-lg-12">
-                                                    <div class="row gy-4">
-                                                     <div class="col-lg-4 col-md-6">
-                                                         <h6 class="history-subtitle">ISBN</h6>
-                                                         <p class="history-desc">7766543567689</p>
-                                                     </div>
-                                                     <div class="col-lg-4 col-md-6">
-                                                         <h6 class="history-subtitle">Condition</h6>
-                                                         <p class="history-desc">Good</p>
-                                                     </div>
-                                                     <div class="col-lg-4 col-md-12">
-                                                         <h6 class="history-subtitle">STATUS</h6>
-                                                         <p class="history-desc"><span class="success-text">Approved</span>|<span class="danger-text">Payment Pending</span></p>
-                                                     </div>
-                                                    </div>
-                                                 </div>
+                                                <div class="col-lg-4 col-md-12">
+                                                    <h6 class="history-subtitle">Payment Date</h6>
+                                                    <p class="history-desc">14 Feb 2024</p>
+                                                </div>
                                                </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-6">
-                                                <p class="text-center"><a href="#" class="btn common-btn">Write Review</a></p>
-                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="row gy-4">
+                                                 <div class="col-lg-4 col-md-6">
+                                                     <h6 class="history-subtitle">Payment Details</h6>
+                                                     <p class="history-desc">7766543567689</p>
+                                                 </div>
+                                                
+                                                 <div class="col-lg-8 col-md-12">
+                                                     <h6 class="history-subtitle">STATUS</h6>
+                                                     <p class="history-desc"><a href="#" class="btn danger-text">Declined</a></p>
+                                                 </div>
+                                                </div>
+                                             </div>
+                                           </div>
                                         </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -802,6 +783,7 @@
         <script type="text/javascript" src="assets/js/fancybox.min.js"></script>
         <script type="text/javascript" src="assets/js/wow.min.js"></script>
         <script type="text/javascript" src="assets/js/custom.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script type="text/javascript" src="assets/js/jquery.meanmenu.min.js"></script>
 
       <script>
@@ -934,6 +916,53 @@ meanMenuContainer: '.mobile-menu',
 });
 </script>
 
+
+<script>
+    $(document).ready(function() {
+    document.getElementById('pro-image').addEventListener('change', readImage, false);
+    
+    $( ".preview-images-zone" ).sortable();
+    
+    $(document).on('click', '.image-cancel', function() {
+        let no = $(this).data('no');
+        $(".preview-image.preview-show-"+no).remove();
+    });
+});
+
+
+
+var num = 4;
+function readImage() {
+    if (window.File && window.FileList && window.FileReader) {
+        var files = event.target.files; //FileList object
+        var output = $(".preview-images-zone");
+
+        for (let i = 0; i < files.length; i++) {
+            var file = files[i];
+            if (!file.type.match('image')) continue;
+            
+            var picReader = new FileReader();
+            
+            picReader.addEventListener('load', function (event) {
+                var picFile = event.target;
+                var html =  '<div class="preview-image preview-show-' + num + '">' +
+                            '<div class="image-cancel" data-no="' + num + '">x</div>' +
+                            '<div class="image-zone"><img id="pro-img-' + num + '" src="' + picFile.result + '"></div>' +
+                            '<div class="tools-edit-image"><a href="javascript:void(0)" data-no="' + num + '" class="btn btn-light btn-edit-image">edit</a></div>' +
+                            '</div>';
+
+                output.prepend(html);
+                num = num + 1;
+            });
+
+            picReader.readAsDataURL(file);
+        }
+        $("#pro-image").val('');
+    } else {
+        console.log('Browser not support');
+    }
+}
+</script>
 
 
 <script> 
