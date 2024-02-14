@@ -883,6 +883,26 @@ border-radius: 10px;
     border-color: #F1F9FF;
     padding: 15px;
     font-size: 14px;
+    position: relative;
+}
+.sell-book-section .sell-book-box .input-icon {
+    font-size: 14px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    bottom: -20px;
+    right: 20px;
+    height: 100%;
+    padding-left: 0px;
+    color: #5D5D5D;
+}
+.sell-book-section .sell-book-box  .form-group{
+    position: relative;
 }
 .sell-book-section .sell-book-box .bg-transt{
     background: transparent;
@@ -1229,7 +1249,7 @@ border-radius: 10px;
       align-items: center;
       position: absolute;
       border-radius: 25px;
-      bottom: -15px;
+      bottom: -15px;    
       height: 100%;
       padding-left: 0px;
       color: #5D5D5D;
@@ -1405,7 +1425,93 @@ border-radius: 10px;
     color: #fff;
 }
 
+.notifications{
+    padding: 60px 0px;
+    background: #FBFBFB ;
+}
+.notifications .notify-box{
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #E6E6E6;
+}
+.notifications .notify-box .notify-title{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.notifications .notify-box .notify-message{
+    background: #F1F9FF;
+    padding: 15px;
+    border-radius: 8px;
+}
+.notifications .notify-box .notify-message .title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
 
+.notify-btn{
+    
+    color: #000 !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0px;
+    position: relative;
+}
+.notify-btn span {
+    position: absolute;
+    top: -6px;
+    right: -7px;
+    background: #FFD731;
+    width: 20px;
+    height: 20px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+}
+.user-btn{
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0px;
+    position: relative;
+    background: #FFD731;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+.user-icons{
+    background: #F1F9FF;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 0px;
+}
+
+.fixed-user{
+    position: fixed;
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    animation: swip_down .5s linear 1;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    z-index: 1210;
+    border-radius: 0px;
+}
+
+.user-icons ul{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0px;
+}
+.user-icons ul li a{
+    font-size: 20px;
+}
 #myBtn {
     display: none;
     position: fixed;
@@ -1526,6 +1632,12 @@ border-radius: 10px;
     .app-section .book-img{
         width: 180px;
     }
+    .profile-detail .profile-right .user-img img {
+        width: 100px;
+    }
+    .profile-detail .profile-right .edit{
+        right: -10px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -1612,6 +1724,12 @@ border-radius: 10px;
     .detailing-section-1 .detail-padd{
         padding: 0px 25px;
     }
+    .profile-detail .profile-right .user-img img {
+        width: 100px;
+    }
+    .profile-detail .profile-right .edit{
+        right: -10px;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
     .web-view {
@@ -1697,6 +1815,12 @@ border-radius: 10px;
     .detailing-section-1 .detail-padd{
         padding: 0px 25px;
     }
+    .profile-detail .profile-right .user-img img {
+        width: 100px;
+    }
+    .profile-detail .profile-right .edit{
+        right: -10px;
+    }
     }   
 
 @media only screen and (max-width: 575.98px) {
@@ -1771,6 +1895,9 @@ border-radius: 10px;
     .mobile-header .offcanvas-body {
         line-height: initial;
     }
+    .profile-detail{
+        padding: 20px 0px;
+    }
     .banner .banner-content .banner-box .banner-box-title{
         font-size: 30px;
     }
@@ -1782,5 +1909,11 @@ border-radius: 10px;
     }
     .footer .footer-contact , .footer .footer-bottom .bottom-list{
         flex-wrap: wrap;
+    }
+    .profile-detail .profile-right .user-img img {
+        width: 100px;
+    }
+    .profile-detail .profile-right .edit{
+        right: -10px;
     }
 }

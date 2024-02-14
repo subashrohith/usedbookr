@@ -24,10 +24,26 @@
         
         <div class="mobile-header mobile-view">
             <div class="container">
-                <div class="row">
-                    <div class="col-10">
+                <div class="row align-items-center">
+                    <div class="col-8">
                         <a href="index.html" class="logo"><img src="assets/images/logo.png" /></a>
                     </div>
+                    <div class="col-1">
+                        <p class="text-end">
+                            <a class="btn notify-btn"  href="notifications.html">
+                                <i class="fa-regular fa-bell"></i>
+                                <span>0</span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-1">
+                        <p class="text-end">
+                            <a class="btn user-btn"  href="my-profile.html">
+                                <i class="bi bi-person"></i>
+                            </a>
+                        </p>
+                    </div>
+                    
                     <div class="col-2">
                         <p class="text-end">
                             <a class="btn toggler" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
@@ -42,7 +58,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 
                               </div>
-                              <p class="text-center"><a href="login.html" class="btn header-btn2 me-2">Login</a><a href="register.html" class="btn header-btn1">Register</a></p>
+                             
                             <div class="offcanvas-body mean-container">
                               <div class="main-menu ">
                                   <nav class="mean-menulist">
@@ -59,7 +75,7 @@
                                       </ul>
                                      
                                   </nav>
-                                  <div class="mt-5"><a href="sell-books.html" class="btn header-btn me-2">Sell Books</a></div>
+                                 
                               </div>
                             
                           </div>
@@ -104,7 +120,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link "  href="index.html">Home</a>
                 </li>
                
                 <li class="nav-item dropdown">
@@ -118,7 +134,7 @@
                 </li>
               </ul>
               <form class="d-flex " role="search">
-                <a href="register.html" class="btn noti-btn" type="submit"><i class="bi bi-bell"></i><span>0</span></a>
+                <a href="notifications.html" class="btn noti-btn" type="submit"><i class="bi bi-bell"></i><span>0</span></a>
                 <a href="register.html" class="btn header-btn1" type="submit">My Account</a>
               </form>
             </div>
@@ -132,7 +148,7 @@
             <div class="row gy-4">
                 <div class="col-lg-3 col-md-4">
                     <div class="profile-left">
-                        <div class="profile-card">
+                        <div class="profile-card web-view">
                           
                              <div class="d-block">
                                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -145,13 +161,23 @@
                                 </div>
                               </div>
                         </div>
-                        
+                        <p class="mt-lg-5 mb-4"><a href="#" class="btn return-btn"><i class="fa-solid fa-arrow-left me-2"></i>Return to shop</a></p>
+                        <div class="user-icons mobile-view">
+                           <ul id="v-pills-tab1" role="tablist">
+                            <li> <a class="nav-link active" id="v-pills-profile1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile1" type="button" role="tab" aria-controls="v-pills-profile1" aria-selected="true"><i class="bi bi-person"></i> </a></li>
+                            <li><a class="nav-link" id="v-pills-sell1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sell1" type="button" role="tab" aria-controls="v-pills-sell1" aria-selected="false"><i class="bi bi-cart3"></i></a></li>
+                            <li><a class="nav-link" id="v-pills-bank1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bank1" type="button" role="tab" aria-controls="v-pills-bank1" aria-selected="false"><i class="bi bi-bank"></i></a></li>
+                            <li><a class="nav-link" id="v-pills-history1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-history1" type="button" role="tab" aria-controls="v-pills-history1" aria-selected="false"><i class="bi bi-clock-history"></i></a></li>
+                           <li> <a class="nav-link" id="v-pills-logout1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-logout1" type="button" role="tab" aria-controls="v-pills-logout1" aria-selected="false"><i class="bi bi-box-arrow-right"></i></a></li>
+                           </ul>
+                        </div>
+                       
                     </div>
-                    <p class="mt-5"><a href="#" class="btn return-btn">Return to shop</a></p>
+                   
                 </div>
                 <div class="col-lg-9 col-md-8">
                     
-                    <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-content web-view" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
                         <h5 class="profile-title">Profile</h5>
                         <div class="row gy-4">
@@ -263,130 +289,66 @@
                     </div>
                        
                     <div class="tab-pane fade" id="v-pills-bank" role="tabpanel" aria-labelledby="v-pills-bank-tab" tabindex="0">
-                        <div class="row gy-4 align-items-center">
-                            <div class="col-lg-6">
-                                <h5 class="profile-title">Order History</h5>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="filter-box">
-                                    <div class="row gy-4">
+                        <div class="sell-book-section">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12">
+                                  
+                                    <div class="sell-book-box">
+                                       <h5 class="book-title">Bank Account Details  </h5>
+                                       <form class="row gy-4 mb-5">
+                                           
+                                           <div class="col-md-6">
+                                               <label class="form-label">Bank Name</label>
+                                               <select class="form-select" aria-label="Default select example">
+                                                <option selected>Bank</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                              </select>
+                                              
+                                           </div>
+                                           <div class="col-md-6">
+                                            <label class="form-label">Holder Name</label>
+                                            <input type="text" class="form-control" placeholder="Account's Holder Name">
+                                        </div>
                                         <div class="col-md-6">
-                                            <select id="inputState" class="form-select">
-                                              <option selected>All</option>
-                                              <option>...</option>
-                                            </select>
-                                          </div>
-                                          <div class="col-md-6">
-                                            <select id="inputState" class="form-select">
-                                              <option selected>Last 30 Days</option>
-                                              <option>...</option>
-                                            </select>
-                                          </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="history-detail">
-                            <div class="book-history">
-                                <div class="row gy-4 align-items-lg-center">
-                                    <div class="col-lg-2 col-md-3">
-                                        <img src="./assets/images/book-1.png" width="100%" alt="">
-                                    </div>
-                                    <div class="col-lg-7 col-md-12">
-                                       <div class="row gy-4">
-                                        <div class="col-lg-12">
-                                            <h6 class="history-subtitle">Book name</h6>
-                                            <p class="history-desc">Objective ncert at your fingertips</p>
-                                        </div>
-                                        <div class="col-lg-12">
-                                           <div class="row gy-4">
-                                            <div class="col-lg-4 col-md-6">
-                                                <h6 class="history-subtitle">author name</h6>
-                                                <p class="history-desc">Lisa jewall</p>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6">
-                                                <h6 class="history-subtitle">Offered price</h6>
-                                                <p class="history-desc">299</p>
-                                            </div>
-                                            <div class="col-lg-4 col-md-12">
-                                                <h6 class="history-subtitle">Categorey</h6>
-                                                <p class="history-desc">Education</p>
-                                            </div>
+                                           <div class="form-group">
+                                            <label class="form-label">IFSC</label>
+                                            <input type="text" class="form-control" placeholder="IFSC">
+                                            <span class="input-icon"><i class="bi bi-question-circle"></i></span>
                                            </div>
                                         </div>
-                                        <div class="col-lg-12">
-                                            <div class="row gy-4">
-                                             <div class="col-lg-4 col-md-6">
-                                                 <h6 class="history-subtitle">ISBN</h6>
-                                                 <p class="history-desc">7766543567689</p>
-                                             </div>
-                                             <div class="col-lg-4 col-md-6">
-                                                 <h6 class="history-subtitle">Condition</h6>
-                                                 <p class="history-desc">Good</p>
-                                             </div>
-                                             <div class="col-lg-4 col-md-12">
-                                                 <h6 class="history-subtitle">STATUS</h6>
-                                                 <p class="history-desc"><span class="success-text">Approved</span>|<span class="danger-text">Payment Pending</span></p>
-                                             </div>
-                                            </div>
-                                         </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <p class="text-center"><a href="#" class="btn common-btn">Write Review</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="book-history">
-                                <div class="row gy-4 align-items-lg-center">
-                                    <div class="col-lg-2 col-md-3">
-                                        <img src="./assets/images/book-2.png" width="100%" alt="">
-                                    </div>
-                                    <div class="col-lg-7 col-md-12">
-                                       <div class="row gy-4">
-                                        <div class="col-lg-12 col-md-12">
-                                            <h6 class="history-subtitle">Book name</h6>
-                                            <p class="history-desc">Objective ncert at your fingertips</p>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12">
-                                           <div class="row gy-4">
-                                            <div class="col-lg-4 col-md-6">
-                                                <h6 class="history-subtitle">author name</h6>
-                                                <p class="history-desc">Lisa jewall</p>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6">
-                                                <h6 class="history-subtitle">Offered price</h6>
-                                                <p class="history-desc">299</p>
-                                            </div>
-                                            <div class="col-lg-4 col-md-12">
-                                                <h6 class="history-subtitle">Categorey</h6>
-                                                <p class="history-desc">Education</p>
-                                            </div>
+                                        <div class="col-md-6">
+                                           <div class="form-group">
+                                            <label class="form-label">Account Number</label>
+                                            <input type="text" class="form-control" placeholder="Account Number">
+                                            <span class="input-icon"><i class="bi bi-question-circle"></i></span>
                                            </div>
                                         </div>
-                                        <div class="col-lg-12">
-                                            <div class="row gy-4">
-                                             <div class="col-lg-4 col-md-6">
-                                                 <h6 class="history-subtitle">ISBN</h6>
-                                                 <p class="history-desc">7766543567689</p>
-                                             </div>
-                                             <div class="col-lg-4 col-md-6">
-                                                 <h6 class="history-subtitle">Condition</h6>
-                                                 <p class="history-desc">Good</p>
-                                             </div>
-                                             <div class="col-lg-4 col-md-12">
-                                                 <h6 class="history-subtitle">STATUS</h6>
-                                                 <p class="history-desc"><span class="success-text">Approved</span>|<span class="danger-text">Payment Pending</span></p>
-                                             </div>
+                                        <div class="col-md-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input coupon_question" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1" onchange="valueChanged()"/>
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                   UPI Details
+                                                </label>
+                                               
+                                              </div>
+                                              
+                                         </div>
+                                         <div class="col-md-6">
+                                            <div class="form-group desc">
+                                             <label class="form-label">UPI ID</label>
+                                             <input type="text" id="upi-number" class="form-control" placeholder="Enter Your UPI ID">
+                                             <span class="input-icon"><i class="bi bi-question-circle"></i></span>
                                             </div>
                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <p class="text-center"><a href="#" class="btn common-btn">Write Review</a></p>
+                                           
+                                         </form>
+                                        
+                                         <p class="mt-4"><a href="#" class="btn submit-btn">Submit</a></p>
                                     </div>
                                 </div>
-                            </div>
+                              </div>
                         </div>
                     </div>
                         <div class="tab-pane fade" id="v-pills-history" role="tabpanel" aria-labelledby="v-pills-history-tab" tabindex="0">
@@ -518,6 +480,309 @@
                         </div>
                        
                       </div>
+                      <div class="tab-content mobile-view" id="v-pills-tabContent1">
+                        <div class="tab-pane fade show active" id="v-pills-profile1" role="tabpanel" aria-labelledby="v-pills-profile1-tab" tabindex="0">
+                            <h5 class="profile-title">Profile</h5>
+                            <div class="row gy-4">
+                            <div class="col-lg-8 col-md-12">
+                                <div class="profile-right">
+                                    <div class="user-bio">
+                                       <div class="row gy-4 align-items-center">
+                                           <div class="col-4">
+                                               <div class="user-img">
+                                                   <img src="./assets/images/user.png" alt="">
+                                                   <div class="edit"><i class="fa-solid fa-pencil"></i></div>
+                                               </div>
+                                           </div>
+                                           <div class="col-8">
+                                               <h1 class="user-name">Profile</h1>
+                                               <p class="user-text">General Information</p>
+                                           </div>
+                                       </div>
+                                    </div>
+                                    <form class="row gy-4 mb-5">
+                                       <div class="col-md-6">
+                                         <label  class="form-label">Full Name</label>
+                                         <input type="text" class="form-control bg-transt" placeholder="Victoria Nowak">
+                                       </div>
+                                       <div class="col-md-6">
+                                         <label  class="form-label">Your Email</label>
+                                         <input type="email" class="form-control" placeholder="victoria@gmail.com">
+                                       </div>
+                                       <div class="col-md-6">
+                                           <label class="form-label">Phone Number</label>
+                                           <input type="phone" class="form-control" placeholder="09675 65623">
+                                       </div>
+                                       <div class="col-md-6">
+                                           <label class="form-label">Password</label>
+                                           <input type="password" class="form-control" placeholder="*****************">
+                                       </div>
+                                       <div class="col-md-12">
+                                        <label class="form-label">Address</label>
+                                        <input type="text" class="form-control" placeholder="Apartment, studio, or floor">
+                                    </div>
+                                       <div class="col-md-12">
+                                          <p class="mt-2 text-end"><button type="submit" class="btn common-btn">Update<i class="fa-solid fa-arrow-right ms-2"></i></button></p>
+                                       </div>
+                                     </form>
+                                   </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="contact-box">
+                                    <h5 class="contact-box-subtitle">Billing Address</h5>
+                                    <h6 class="contact-box-title">Victoria Nowak</h6>
+                                    <p class="contact-box-text">4140 Parker Rd. Allentown, New Mexico 31134</p>
+                                    <p class="contact-box-text">victoria@gmail.com</p>
+                                    <p class="contact-box-text">(671) 555-0110</p>
+                                    <p class="contact-box-link"><a href="my-profile.html#v-pills-profile">Edit Address</a></p>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+    
+                        <div class="tab-pane fade" id="v-pills-sell1" role="tabpanel" aria-labelledby="v-pills-sell1-tab" tabindex="0">
+                            <div class="sell-book-section">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-12">
+                                      
+                                        <div class="sell-book-box">
+                                           <h5 class="book-title">Book details</h5>
+                                           <form class="row gy-4 mb-5">
+                                               
+                                               <div class="col-md-6">
+                                                   <label class="form-label">ISBN</label>
+                                                   <input type="text" class="form-control" placeholder="24327437568">
+                                               </div>
+                                              
+                                               
+                                             </form>
+                                             <h5 class="book-title">Add your book images<i class="bi bi-question-circle ms-2"></i></h5>
+                                             <div class="row gy-4 gx-2">
+                                                <div class="col-lg-2 col-6 col-md-3">
+                                                    <img src="./assets/images/book-1.png" width="100%" alt="">
+                                                </div>
+                                                <div class="col-lg-2 col-6 col-md-3">
+                                                    <img src="./assets/images/book-2.png" width="100%" alt="">
+                                                </div>
+                                                <div class="col-lg-2 col-6 col-md-3">
+                                                    <img src="./assets/images/book-3.png" width="100%" alt="">
+                                                </div>
+                                                <div class="col-lg-2 col-6 col-md-3">
+                                                    <img src="./assets/images/book-2.png" width="100%" alt="">
+                                                </div>
+                                                <div class="col-lg-2 col-6 col-md-3">
+                                                    <img src="./assets/images/book-3.png" width="100%" alt="">
+                                                </div>
+                                                <div class="col-lg-2 col-6 col-md-3">
+                                                    <div class="file-upload">
+                                                        <label for="upload" class="file-upload__label">
+                                                            <div class="position-box">
+                                                                <div class="icon"><i class="bi bi-plus-circle"></i></div><div class="text">Add more</div>
+                                                            </div>
+                                                        </label>
+                                                        <input id="upload" class="file-upload__input" type="file" name="file-upload">
+                                                    </div>
+                                                </div>
+                                             </div>
+                                             <p class="mt-4"><a href="#" class="btn submit-btn">Submit</a></p>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                           
+                        <div class="tab-pane fade" id="v-pills-bank1" role="tabpanel" aria-labelledby="v-pills-bank1-tab" tabindex="0">
+                            <div class="sell-book-section">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-12">
+                                      
+                                        <div class="sell-book-box">
+                                           <h5 class="book-title">Bank Account Details  </h5>
+                                           <form class="row gy-4 mb-5">
+                                               
+                                               <div class="col-md-6">
+                                                   <label class="form-label">Bank Name</label>
+                                                   <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Bank</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                  </select>
+                                                  
+                                               </div>
+                                               <div class="col-md-6">
+                                                <label class="form-label">Holder Name</label>
+                                                <input type="text" class="form-control" placeholder="Account's Holder Name">
+                                            </div>
+                                            <div class="col-md-6">
+                                               <div class="form-group">
+                                                <label class="form-label">IFSC</label>
+                                                <input type="text" class="form-control" placeholder="IFSC">
+                                                <span class="input-icon"><i class="bi bi-question-circle"></i></span>
+                                               </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                               <div class="form-group">
+                                                <label class="form-label">Account Number</label>
+                                                <input type="text" class="form-control" placeholder="Account Number">
+                                                <span class="input-icon"><i class="bi bi-question-circle"></i></span>
+                                               </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input coupon_question" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1" onchange="valueChanged()"/>
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                       UPI Details
+                                                    </label>
+                                                   
+                                                  </div>
+                                                  
+                                             </div>
+                                             <div class="col-md-6">
+                                                <div class="form-group desc">
+                                                 <label class="form-label">UPI ID</label>
+                                                 <input type="text" id="upi-number" class="form-control" placeholder="Enter Your UPI ID">
+                                                 <span class="input-icon"><i class="bi bi-question-circle"></i></span>
+                                                </div>
+                                             </div>
+                                               
+                                             </form>
+                                            
+                                             <p class="mt-4"><a href="#" class="btn submit-btn">Submit</a></p>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                            <div class="tab-pane fade" id="v-pills-history1" role="tabpanel" aria-labelledby="v-pills-history1-tab" tabindex="0">
+                                <div class="row gy-4 align-items-center">
+                                    <div class="col-lg-6">
+                                        <h5 class="profile-title">Order History</h5>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="filter-box">
+                                            <div class="row gy-4">
+                                                <div class="col-md-6">
+                                                    <select id="inputState" class="form-select">
+                                                      <option selected>All</option>
+                                                      <option>...</option>
+                                                    </select>
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <select id="inputState" class="form-select">
+                                                      <option selected>Last 30 Days</option>
+                                                      <option>...</option>
+                                                    </select>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-detail">
+                                    <div class="book-history">
+                                        <div class="row gy-4 align-items-lg-center">
+                                            <div class="col-lg-2 col-md-3">
+                                                <img src="./assets/images/book-1.png" width="100%" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-md-12">
+                                               <div class="row gy-4">
+                                                <div class="col-lg-12">
+                                                    <h6 class="history-subtitle">Book name</h6>
+                                                    <p class="history-desc">Objective ncert at your fingertips</p>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                   <div class="row gy-4">
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <h6 class="history-subtitle">author name</h6>
+                                                        <p class="history-desc">Lisa jewall</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <h6 class="history-subtitle">Offered price</h6>
+                                                        <p class="history-desc">299</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-12">
+                                                        <h6 class="history-subtitle">Categorey</h6>
+                                                        <p class="history-desc">Education</p>
+                                                    </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="row gy-4">
+                                                     <div class="col-lg-4 col-md-6">
+                                                         <h6 class="history-subtitle">ISBN</h6>
+                                                         <p class="history-desc">7766543567689</p>
+                                                     </div>
+                                                     <div class="col-lg-4 col-md-6">
+                                                         <h6 class="history-subtitle">Condition</h6>
+                                                         <p class="history-desc">Good</p>
+                                                     </div>
+                                                     <div class="col-lg-4 col-md-12">
+                                                         <h6 class="history-subtitle">STATUS</h6>
+                                                         <p class="history-desc"><span class="success-text">Approved</span>|<span class="danger-text">Payment Pending</span></p>
+                                                     </div>
+                                                    </div>
+                                                 </div>
+                                               </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <p class="text-center"><a href="#" class="btn common-btn">Write Review</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-history">
+                                        <div class="row gy-4 align-items-lg-center">
+                                            <div class="col-lg-2 col-md-3">
+                                                <img src="./assets/images/book-2.png" width="100%" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-md-12">
+                                               <div class="row gy-4">
+                                                <div class="col-lg-12 col-md-12">
+                                                    <h6 class="history-subtitle">Book name</h6>
+                                                    <p class="history-desc">Objective ncert at your fingertips</p>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12">
+                                                   <div class="row gy-4">
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <h6 class="history-subtitle">author name</h6>
+                                                        <p class="history-desc">Lisa jewall</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <h6 class="history-subtitle">Offered price</h6>
+                                                        <p class="history-desc">299</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-12">
+                                                        <h6 class="history-subtitle">Categorey</h6>
+                                                        <p class="history-desc">Education</p>
+                                                    </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="row gy-4">
+                                                     <div class="col-lg-4 col-md-6">
+                                                         <h6 class="history-subtitle">ISBN</h6>
+                                                         <p class="history-desc">7766543567689</p>
+                                                     </div>
+                                                     <div class="col-lg-4 col-md-6">
+                                                         <h6 class="history-subtitle">Condition</h6>
+                                                         <p class="history-desc">Good</p>
+                                                     </div>
+                                                     <div class="col-lg-4 col-md-12">
+                                                         <h6 class="history-subtitle">STATUS</h6>
+                                                         <p class="history-desc"><span class="success-text">Approved</span>|<span class="danger-text">Payment Pending</span></p>
+                                                     </div>
+                                                    </div>
+                                                 </div>
+                                               </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <p class="text-center"><a href="#" class="btn common-btn">Write Review</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                          </div>
                 </div>
              
             </div>
@@ -649,15 +914,27 @@
 </script>
 
 <script>
+    $(document).ready(function(){       
+          var scroll_pos = 0;
+          $(document).scroll(function() { 
+              scroll_pos = $(this).scrollTop();
+              if(scroll_pos >= 50) {
+                  $('.user-icons').addClass("fixed-user");
+              } else {
+                  $('.user-icons').removeClass("fixed-user");
+              }
+          });
+      });
+  </script>
+
+<script>
   $('.mean-menulist').meanmenu({
 meanMenuContainer: '.mobile-menu',
 
 });
 </script>
 
-<script>
-  
-  </script>
+
 
 <script> 
     $(function(){
